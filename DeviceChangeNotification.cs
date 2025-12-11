@@ -37,7 +37,7 @@ namespace MarvinsAIRA
 			public int dbcc_reserved;
 			public Guid dbcc_classguid;
 			[MarshalAs( UnmanagedType.ByValArray, SizeConst = 255 )]
-			public char[] dbcc_name;
+			public char[]? dbcc_name;
 		}
 
 		[StructLayout( LayoutKind.Sequential )]
