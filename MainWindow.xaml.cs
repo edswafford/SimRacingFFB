@@ -12,7 +12,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-using WK.Libraries.BootMeUpNS;
+//TODO BootMe  using WK.Libraries.BootMeUpNS;
 
 using ModernWpf.Controls;
 
@@ -75,7 +75,7 @@ namespace MarvinsAIRA
 
 		private IntPtr _win_deviceChangeNotificationHandle = 0;
 
-		private BootMeUp _win_bootMeUp = new();
+		//TODO BootMe  Upprivate BootMeUp _win_bootMeUp = new();
 
 		private readonly Stopwatch _win_stopwatch = new();
 
@@ -264,14 +264,14 @@ namespace MarvinsAIRA
 
 				Advanced_ToggleSwitch_Toggled( Advanced_ToggleSwitch, new RoutedEventArgs() );
 
-				_win_bootMeUp.UseAlternativeOnFail = true;
-				_win_bootMeUp.BootArea = BootMeUp.BootAreas.Registry;
-				_win_bootMeUp.TargetUser = BootMeUp.TargetUsers.CurrentUser;
-				_win_bootMeUp.Enabled = app.Settings.StartWithWindows;
+                //TODO BootMe  _win_bootMeUp.UseAlternativeOnFail = true;
+                //_win_bootMeUp.BootArea = BootMeUp.BootAreas.Registry;
+                //_win_bootMeUp.TargetUser = BootMeUp.TargetUsers.CurrentUser;
+                //_win_bootMeUp.Enabled = app.Settings.StartWithWindows;
 
-				// supporters textbox
+                // supporters textbox
 
-				string[] supporterList = [ "@lucciano.netto", "Bruno Cerdeira Santos", "DIOGO XAVIER OLIVEIRA", "Herbert Heissenberger", "Robert JL Henry", "Chad McNeese", "Marcos Martins de Souza", "Erin Andrusak", "Matthew Davids", "Travis Boudreaux", "f1iq.bsky.social", "Tomáš Šulek", "Alberto Rama", "Andreas Mauchle", "@azmath16", "Camron Frederick", "@broch_evans", "Christian Scherf", "Chao Du", "Tyler Hagan", "Shane Cochran", "Flavio A Mendes", "G. Balla", "Greg Ogilvie", "Jeff Fritscher", "Jonathan E Marshall", "Maksym Palazov", "Robert Perry", "Nelson Rivera", "Nash Milincic", "Joachim Osbeck", "Paolo", "Panayiotis Papaioannou", "Rony Issak", "Rick", "Simon A Todd", "stuart h ware", "Timothy Craig", "Maciej Tonderski", "V A Parnell Jr MD", "Yafar Abdala.", "Ari D Sherwood", "Brendan Hobbart", "Dave Cam", "Dan", "steven slater", "Mitchell Bowen", "M C Hastrich", "Ryan Feltrin", "Ba Anh Vu", "Alan King", "Jakub Trinkl", "John Cherry", "Ryan Bath", "Travis Rhoads", "Robert Watson", "Sascha", "John Ebersole", "Rowly", "William Daily Jr", "didier porte", "Alan", "MR A M HALL", "Binesh Lad", "Michael Buckley", "Carlos Mancuso", "Chad Buchanan", "Christian Elsinger", "Daniel R", "David", "Dirk Ehrhardt", "Daniel König", "Geert Van Laere", "Glen D Blanchard DDS", "Greg Obrigavitch", "hamilton smith", "Hugo", "Sean Symes", "illuminodie", "João Carriço", "Julian", "Kevin Burke", "marcus iglesias de souza oliveira", "@joeyladouceur", "Marco", "Mark Fleming", "Marin Marinov", "Marshall", "Mark G", "@G83MIKE", "Mikey Polard", "Mark R McLewee", "Kevin J Fanning", "Patrick Rochadel", "John McCallion", "Sergio Junior", "Shawn L Parrish", "@sidgeracing", "@fuelpodcast", "Stephane THIBAUT", "T", "Johan Grankvist", "Ade", "Timothy Moore", "YAMINE TAIEB", "Matt Swift", "BorkulusRift", "Ahmad El Baba", "ARMracing", "Chase", "Crispin Williamson", "Alberto", "Grimaldi Jean", "@eliassomo97", "FABIO R QUEIROZ", "Adrian G Rubio", "Grimax Racing", "Halan Williams", "GUIDOTTI", "Jeroni Fajardo", "Peynado", "Karl Thoroddsen", "Mr Kurt Nicholson", "Alexander Socher", "candido martinez", "Markus Kathan", "Massimo Martiglia", "Michie", "John Millet", "@millsdo", "Nicholas Williams", "Noah Rusk", "Ole", "Olly", "Omar Carlet", "S.Schels", "Rene Vorwerk", "Robert Gerke", "Sergio Macias", "Shane Gleeson", "AUSTIN ELLIOTT", "Stanislav Boldyryev", "Steven Barker", "Lufino", "Tom Weston", "Tripp Lanier", "CRISTIAN VILLENA SANCHEZ", "zdenek.kaska@gmail.com", "joy perez", "JOAO BATISTA", "Rodrigo Ribeiro R S lima", "Sebastian", "Yann LE DOUSSAL", "Elprimartin", "Enrico castellano", "EatisLee", "SEBASTIAO FERREIRA", "jeremy", "Knosby", "Luka", "Miguel Angel Casado González", "and to all of the others who have chosen to remain anonymous." ];
+                string[] supporterList = [ "@lucciano.netto", "Bruno Cerdeira Santos", "DIOGO XAVIER OLIVEIRA", "Herbert Heissenberger", "Robert JL Henry", "Chad McNeese", "Marcos Martins de Souza", "Erin Andrusak", "Matthew Davids", "Travis Boudreaux", "f1iq.bsky.social", "Tomáš Šulek", "Alberto Rama", "Andreas Mauchle", "@azmath16", "Camron Frederick", "@broch_evans", "Christian Scherf", "Chao Du", "Tyler Hagan", "Shane Cochran", "Flavio A Mendes", "G. Balla", "Greg Ogilvie", "Jeff Fritscher", "Jonathan E Marshall", "Maksym Palazov", "Robert Perry", "Nelson Rivera", "Nash Milincic", "Joachim Osbeck", "Paolo", "Panayiotis Papaioannou", "Rony Issak", "Rick", "Simon A Todd", "stuart h ware", "Timothy Craig", "Maciej Tonderski", "V A Parnell Jr MD", "Yafar Abdala.", "Ari D Sherwood", "Brendan Hobbart", "Dave Cam", "Dan", "steven slater", "Mitchell Bowen", "M C Hastrich", "Ryan Feltrin", "Ba Anh Vu", "Alan King", "Jakub Trinkl", "John Cherry", "Ryan Bath", "Travis Rhoads", "Robert Watson", "Sascha", "John Ebersole", "Rowly", "William Daily Jr", "didier porte", "Alan", "MR A M HALL", "Binesh Lad", "Michael Buckley", "Carlos Mancuso", "Chad Buchanan", "Christian Elsinger", "Daniel R", "David", "Dirk Ehrhardt", "Daniel König", "Geert Van Laere", "Glen D Blanchard DDS", "Greg Obrigavitch", "hamilton smith", "Hugo", "Sean Symes", "illuminodie", "João Carriço", "Julian", "Kevin Burke", "marcus iglesias de souza oliveira", "@joeyladouceur", "Marco", "Mark Fleming", "Marin Marinov", "Marshall", "Mark G", "@G83MIKE", "Mikey Polard", "Mark R McLewee", "Kevin J Fanning", "Patrick Rochadel", "John McCallion", "Sergio Junior", "Shawn L Parrish", "@sidgeracing", "@fuelpodcast", "Stephane THIBAUT", "T", "Johan Grankvist", "Ade", "Timothy Moore", "YAMINE TAIEB", "Matt Swift", "BorkulusRift", "Ahmad El Baba", "ARMracing", "Chase", "Crispin Williamson", "Alberto", "Grimaldi Jean", "@eliassomo97", "FABIO R QUEIROZ", "Adrian G Rubio", "Grimax Racing", "Halan Williams", "GUIDOTTI", "Jeroni Fajardo", "Peynado", "Karl Thoroddsen", "Mr Kurt Nicholson", "Alexander Socher", "candido martinez", "Markus Kathan", "Massimo Martiglia", "Michie", "John Millet", "@millsdo", "Nicholas Williams", "Noah Rusk", "Ole", "Olly", "Omar Carlet", "S.Schels", "Rene Vorwerk", "Robert Gerke", "Sergio Macias", "Shane Gleeson", "AUSTIN ELLIOTT", "Stanislav Boldyryev", "Steven Barker", "Lufino", "Tom Weston", "Tripp Lanier", "CRISTIAN VILLENA SANCHEZ", "zdenek.kaska@gmail.com", "joy perez", "JOAO BATISTA", "Rodrigo Ribeiro R S lima", "Sebastian", "Yann LE DOUSSAL", "Elprimartin", "Enrico castellano", "EatisLee", "SEBASTIAO FERREIRA", "jeremy", "Knosby", "Luka", "Miguel Angel Casado González", "and to all of the others who have chosen to remain anonymous." ];
 
 				Supporters_TextBox.Text = "Thank you to " + string.Join( ", ", supporterList );
 
@@ -1578,10 +1578,10 @@ namespace MarvinsAIRA
 
 			var startWithWindows = checkBox.IsChecked == true;
 
-			_win_bootMeUp.Enabled = startWithWindows;
-		}
+            //TODO BootMe	_win_bootMeUp.Enabled = startWithWindows;
+        }
 
-		private void TopmostWindow_CheckBox_Click( object sender, RoutedEventArgs e )
+        private void TopmostWindow_CheckBox_Click( object sender, RoutedEventArgs e )
 		{
 			var app = (App) Application.Current;
 
