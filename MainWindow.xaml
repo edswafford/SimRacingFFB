@@ -13,7 +13,7 @@
         Width="1000"
         SizeToContent="Height"
         ResizeMode="CanMinimize"
-        Icon="/white-icon.ico"
+        Icon="/src/SimRacingFFB/Assets/white-icon.ico"
         WindowStartupLocation="CenterScreen"
         ui:WindowHelper.UseModernWindowStyle="True"
         Activated="Window_Activated"
@@ -52,13 +52,13 @@
                             <ComboBox x:Name="FFBDevice_ComboBox" Grid.Column="1" Margin="10,0,0,0" HorizontalAlignment="Stretch" ItemsSource="{Binding FFBDeviceList, Mode=OneWay}" DisplayMemberPath="Value" SelectedValuePath="Key" SelectedValue="{Binding SelectedFFBDeviceGuid}" SelectionChanged="FFBDevice_ComboBox_SelectionChanged" />
                             <Button Grid.Column="2" x:Name="ForceFeedbackTest_Button" Margin="15,0,10,0" Content="TEST" Click="ForceFeedbackTest_Button_Click" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontWeight="Bold" FontSize="12" BorderThickness="2,2,2,2" BorderBrush="#FF6D6D6D" />
                             <Button Grid.Column="3" x:Name="Record_Button" Click="Record_Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="32" MinHeight="32" Padding="0,0,0,0">
-                                <Image Source="/record-button.png"/>
+                                <Image Source="/src/SimRacingFFB/Assets/record-button.png"/>
                             </Button>
                             <Button Grid.Column="4" x:Name="Play_Button" Click="Play_Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="32" MinHeight="32" Padding="0,0,0,0">
-                                <Image Source="/play-button.png"/>
+                                <Image Source="/src/SimRacingFFB/Assets/play-button.png"/>
                             </Button>
                             <Button Grid.Column="5" x:Name="ResetForceFeedbackMap_Button" Click="ResetForceFeedbackMap_Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="32" MinHeight="32" Padding="0,0,0,0">
-                                <Image Source="/r-button.png"/>
+                                <Image Source="/src/SimRacingFFB/Assets/r-button.png"/>
                             </Button>
                         </Grid>
                         <Grid Margin="0,5,0,0">
@@ -93,16 +93,16 @@
                                 <Button Grid.Row="0" x:Name="AutoOverallScale_Button" Content="AUTO" Click="AutoOverallScale_Button_Click" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontWeight="Bold" FontSize="12" BorderThickness="2,2,2,2" BorderBrush="#FF6D6D6D" IsEnabled="False" Width="80" MouseRightButtonDown="AutoOverallScale_Button_MouseRightButtonDown" ToolTip="Right-click to clear, left-click to set overall scale slider." />
                             </Grid>
                             <Button Grid.Column="4" x:Name="AutoOverallScaleMap_Button" Click="AutoOverallScaleMap_Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="32" MinHeight="32" Padding="0,0,0,0" Margin="5,0,0,0">
-                                <Image Source="/a-button.png"/>
+                                <Image Source="/src/SimRacingFFB/Assets/a-button.png"/>
                             </Button>
                             <Button Grid.Column="5" x:Name="ClearAutoOverallScaleMap_Button" Click="ClearAutoOverallScaleMap_Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="32" MinHeight="32" Padding="0,0,0,0">
-                                <Image Source="/c-button.png"/>
+                                <Image Source="/src/SimRacingFFB/Assets/c-button.png"/>
                             </Button>
                             <Button Grid.Column="6" x:Name="DecreaseOverallScaleMap_Button" Click="DecreaseOverallScaleMap_Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="32" MinHeight="32" Padding="0,0,0,0">
-                                <Image Source="/minus-button.png"/>
+                                <Image Source="/src/SimRacingFFB/Assets/minus-button.png"/>
                             </Button>
                             <Button Grid.Column="7" x:Name="IncreaseOverallScaleMap_Button" Click="IncreaseOverallScaleMap_Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="32" MinHeight="32" Padding="0,0,0,0">
-                                <Image Source="/plus-button.png"/>
+                                <Image Source="/src/SimRacingFFB/Assets/plus-button.png"/>
                             </Button>
                         </Grid>
                         <Grid Margin="0,5,0,0">
@@ -117,10 +117,10 @@
                             <TextBox Grid.Column="1" Text="{Binding DetailScaleString}" VerticalAlignment="Center" FontWeight="Medium" TextAlignment="Center" Margin="10,0,0,0" IsUndoEnabled="False" MaxLines="1" Padding="0,0,0,0" GotKeyboardFocus="TextBox_GotKeyboardFocus" PreviewTextInput="TextBox_PreviewTextInput" LostKeyboardFocus="TextBox_LostKeyboardFocus" />
                             <Slider Grid.Column="2" VerticalAlignment="Center" Margin="10,0,0,0" Minimum="0" Maximum="500" SmallChange="0.1" LargeChange="10" Value="{Binding DetailScale}" PreviewKeyDown="Slider_PreviewKeyDown" />
                             <Button Grid.Column="3" x:Name="DecreaseDetailScaleMap_Button" Margin="10,0,0,0" Click="DecreaseDetailScaleMap_Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="32" MinHeight="32" Padding="0,0,0,0">
-                                <Image Source="/minus-button.png"/>
+                                <Image Source="/src/SimRacingFFB/Assets/minus-button.png"/>
                             </Button>
                             <Button Grid.Column="4" x:Name="IncreaseDetailScaleMap_Button" Click="IncreaseDetailScaleMap_Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="32" MinHeight="32" Padding="0,0,0,0">
-                                <Image Source="/plus-button.png"/>
+                                <Image Source="/src/SimRacingFFB/Assets/plus-button.png"/>
                             </Button>
                         </Grid>
                         <Grid Margin="0,5,0,0" x:Name="ParkedScale_Grid">
@@ -259,7 +259,7 @@
                                     </Grid>
                                 </StackPanel>
                                 <Button Grid.Column="1" x:Name="UndersteerEffectMap_Button" Margin="10,0,0,0" Click="UndersteerEffectMap_Button_Click" Background="{x:Null}" BorderBrush="{x:Null}" MinWidth="32" MinHeight="32" Padding="0,0,0,0">
-                                    <Image Source="/u-button.png"/>
+                                    <Image Source="/src/SimRacingFFB/Assets/u-button.png"/>
                                 </Button>
                             </Grid>
                         </StackPanel>
@@ -497,7 +497,7 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0">
                             <Label Content="Steering Angle" HorizontalAlignment="Center" Margin="0,0,0,10"/>
-                            <Image x:Name="SteeringWheel_Image" Source="/steering-wheel.png" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+                            <Image x:Name="SteeringWheel_Image" Source="/src/SimRacingFFB/Assets/steering-wheel.png" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
                                 <Image.RenderTransform>
                                     <TransformGroup>
                                         <ScaleTransform/>
@@ -1490,7 +1490,7 @@
                 </ui:ToggleSwitch>
             </StatusBarItem>
         </StatusBar>
-        <tb:TaskbarIcon x:Name="MARIA_TaskbarIcon" IconSource="/white-icon.ico" ToolTipText="Marvin's Awesome iRacing App" TrayLeftMouseDown="TaskbarIcon_TrayLeftMouseDown">
+        <tb:TaskbarIcon x:Name="MARIA_TaskbarIcon" IconSource="/src/SimRacingFFB/Assets/white-icon.ico" ToolTipText="Marvin's Awesome iRacing App" TrayLeftMouseDown="TaskbarIcon_TrayLeftMouseDown">
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
                     <MenuItem x:Name="ShowApp_MenuItem" Header="Show Marvin's Awesome iRacing App" Click="ShowApp_MenuItem_Click" />

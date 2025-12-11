@@ -7,7 +7,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <ApplicationIcon>white-icon.ico</ApplicationIcon>
+    <ApplicationIcon>src/SimRacingFFB/Assets/white-icon.ico</ApplicationIcon>
     <PackageIcon>icon.png</PackageIcon>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
@@ -16,21 +16,6 @@
     <Compile Remove="FFBReceiver.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="a-button.png" />
-    <None Remove="ABS.wav" />
-    <None Remove="black-icon.ico" />
-    <None Remove="c-button.png" />
-    <None Remove="click.wav" />
-    <None Remove="minus-button.png" />
-    <None Remove="play-button.png" />
-    <None Remove="plus-button.png" />
-    <None Remove="r-button.png" />
-    <None Remove="record-button.png" />
-    <None Remove="steering-wheel.png" />
-    <None Remove="u-button.png" />
-    <None Remove="white-icon.ico" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BootMeUp" Version="1.2.0" />
@@ -54,19 +39,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="a-button.png" />
-    <Resource Include="abs.wav" />
-    <Resource Include="black-icon.ico" />
-    <Resource Include="c-button.png" />
-    <Resource Include="click.wav" />
-    <Resource Include="minus-button.png" />
-    <Resource Include="play-button.png" />
-    <Resource Include="plus-button.png" />
-    <Resource Include="r-button.png" />
-    <Resource Include="record-button.png" />
-    <Resource Include="steering-wheel.png" />
-    <Resource Include="u-button.png" />
-    <Resource Include="white-icon.ico" />
+    <Resource Include="src/SimRacingFFB/Assets/a-button.png" />
+    <Resource Include="src/SimRacingFFB/Assets/abs.wav" />
+    <Resource Include="src/SimRacingFFB/Assets/black-icon.ico" />
+    <Resource Include="src/SimRacingFFB/Assets/c-button.png" />
+    <Resource Include="src/SimRacingFFB/Assets/click.wav" />
+    <Resource Include="src/SimRacingFFB/Assets/minus-button.png" />
+    <Resource Include="src/SimRacingFFB/Assets/play-button.png" />
+    <Resource Include="src/SimRacingFFB/Assets/plus-button.png" />
+    <Resource Include="src/SimRacingFFB/Assets/r-button.png" />
+    <Resource Include="src/SimRacingFFB/Assets/record-button.png" />
+    <Resource Include="src/SimRacingFFB/Assets/steering-wheel.png" />
+    <Resource Include="src/SimRacingFFB/Assets/u-button.png" />
+    <Resource Include="src/SimRacingFFB/Assets/white-icon.ico" />
   </ItemGroup>
 
   <ItemGroup>

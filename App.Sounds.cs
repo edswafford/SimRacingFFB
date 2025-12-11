@@ -27,7 +27,7 @@ namespace MarvinsAIRA
 
 			WriteLine( "...loading click sound..." );
 
-			var resourceStream = GetResourceStream( new Uri( "pack://application:,,,/click.wav" ) );
+			var resourceStream = GetResourceStream( new Uri( "pack://application:,,,/src/SimRacingFFB/Assets/click.wav" ) );
 
 			_sounds_clickWaveStream = new WaveFileReader( resourceStream.Stream );
 
@@ -52,7 +52,7 @@ namespace MarvinsAIRA
 
 			WriteLine( "...loading ABS sound..." );
 
-			resourceStream = GetResourceStream( new Uri( "pack://application:,,,/abs.wav" ) );
+			resourceStream = GetResourceStream( new Uri( "pack://application:,,,/src/SimRacingFFB/Assets/abs.wav" ) );
 
 			_sounds_absLoopStream = new LoopStream( new WaveFileReader( resourceStream.Stream ) );
 
