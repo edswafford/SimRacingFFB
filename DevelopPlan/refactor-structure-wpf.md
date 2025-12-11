@@ -64,18 +64,19 @@ todos:
 
 1) **Inventory & map**: catalog current files (assets, XAML, services/helpers like `App.*.cs`, `LogitechGSDK.cs`, `SerializableDictionary.cs`, `SpeechApiReflectionHelper.cs`) and their resource usages in `SimRacingFFB.csproj`. Exclude `IRSDKSharper` and `SimagicHPR` since they will become external packages.
 2) **Create folders**: add new directory skeleton under `src/` and `tests/` without moving files; no code changes yet.
-3) **Phase 1 – assets/config**: move icons/wavs into `Assets/`; update `SimRacingFFB.csproj` `Resource` and `ApplicationIcon` paths only; build check.
-4) **Phase 2 – infrastructure/interop**: move external SDK wrappers and interop helpers (`LogitechGSDK.cs`, `WinApi.cs`, `FFBReceiver.cs`, `DeviceChangeNotification.cs`, `LoopStream.cs`, `SpeechApiReflectionHelper.cs`) into `Interop/` or `Infrastructure/`; adjust csproj includes; build check.
-5) **Phase 3 – UI**: move XAML windows (`MainWindow.xaml`, `MapButtonWindow.xaml`, etc.) into `UI/Views/`; keep code-behind paired; update csproj `Page` includes if needed; build check.
-6) **Phase 4 – app/services/common**: move `App.*.cs` partials into `Application/` or `Services/`; move utilities (`Serializer.cs`, `ClipboardHelper.cs`, `Settings.cs`) into `Common/` or `Services/`; update csproj; build check.
-7) **Phase 5 – simulators**: move iRacing-specific code (e.g., `App.IRacingSDK.cs`) into `Simulators/IRacing/`; update csproj; build check.
-8) **Phase 6 – tests/docs/tools**: ensure `tests/SimRacingFFB.Tests/` exists; place `README.md`/notes in `docs/`; move `InstallScript.iss` to `tools/`; update solution if paths change; build check.
-9) **Cleanup**: remove empty legacy directories from root, verify resource links still resolve, and tidy solution folder mappings.
+3) **Phase 1 – assets/config**: move icons/wavs into `Assets/`; update `SimRacingFFB.csproj` `Resource` and `ApplicationIcon` paths only; build check; **run application check**.
+4) **Phase 2 – infrastructure/interop**: move external SDK wrappers and interop helpers (`LogitechGSDK.cs`, `WinApi.cs`, `FFBReceiver.cs`, `DeviceChangeNotification.cs`, `LoopStream.cs`, `SpeechApiReflectionHelper.cs`) into `Interop/` or `Infrastructure/`; adjust csproj includes; build check; **run application check**.
+5) **Phase 3 – UI**: move XAML windows (`MainWindow.xaml`, `MapButtonWindow.xaml`, etc.) into `UI/Views/`; keep code-behind paired; update csproj `Page` includes if needed; update `App.xaml` StartupUri path; build check; **run application check**.
+6) **Phase 4 – app/services/common**: move `App.*.cs` partials into `Application/` or `Services/`; move utilities (`Serializer.cs`, `ClipboardHelper.cs`, `Settings.cs`) into `Common/` or `Services/`; update csproj; build check; **run application check**.
+7) **Phase 5 – simulators**: move iRacing-specific code (e.g., `App.IRacingSDK.cs`) into `Simulators/IRacing/`; update csproj; build check; **run application check**.
+8) **Phase 6 – tests/docs/tools**: ensure `tests/SimRacingFFB.Tests/` exists; place `README.md`/notes in `docs/`; move `InstallScript.iss` to `tools/`; update solution if paths change; build check; **run application check**.
+9) **Cleanup**: remove empty legacy directories from root, verify resource links still resolve, and tidy solution folder mappings; **final build and run application check**.
 
 ## Notes
 
 - `IRSDKSharper` and `SimagicHPR` are assumed to be consumed as NuGet-like packages, not part of the workspace; do not create folders for them.
 - Keep moves small per phase and run a build after each to catch broken resource includes or relative paths.
+- **After each successful build, run the application to verify it starts correctly and resources load properly** (checkpoint verification).
 - Avoid code edits unless a path change requires a project include update.
 - Add future `ViewModels/Interfaces` folders now to encourage MVVM separation later.
 - The `Simulators/` directory structure supports future multi-simulator support using interfaces; currently only iRacing implementation is needed.

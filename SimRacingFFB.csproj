@@ -88,6 +88,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ApplicationDefinition Include="src/SimRacingFFB/Application/App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Interfaces\" />
   </ItemGroup>
 
