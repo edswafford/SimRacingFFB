@@ -33,7 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BootMeUp" Version="1.2.0" />
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.7.25104.5739" />
     <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="2.0.1" />
     <PackageReference Include="ModernWpfUI" Version="0.9.6" />
@@ -51,6 +50,8 @@
   <ItemGroup>
     <ProjectReference Include="..\IRSDKSharper\IRSDKSharper.csproj" />
     <ProjectReference Include="..\SimagicHPR\SimagicHPR.csproj" />
+    <ProjectReference Include="IRSDKSharper\IRSDKSharper.csproj" />
+    <ProjectReference Include="SimagicHPR\SimagicHPR.csproj" />
   </ItemGroup>
 
   <ItemGroup>
