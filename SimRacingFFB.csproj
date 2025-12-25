@@ -2,21 +2,25 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows10.0.26100.0</TargetFramework>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <ApplicationIcon>src/SimRacingFFB/Assets/white-icon.ico</ApplicationIcon>
+    <ApplicationIcon>src/Assets/white-icon.ico</ApplicationIcon>
     <PackageIcon>icon.png</PackageIcon>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="src\SimRacingFFB\**" />
+    <Compile Remove="tests\**" />
     <EmbeddedResource Remove="src\SimRacingFFB\**" />
+    <EmbeddedResource Remove="tests\**" />
     <None Remove="src\SimRacingFFB\**" />
+    <None Remove="tests\**" />
     <Page Remove="src\SimRacingFFB\**" />
+    <Page Remove="tests\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +29,6 @@
 
 
   <ItemGroup>
-    <PackageReference Include="BootMeUp" Version="1.2.0" />
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.7.25104.5739" />
     <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="2.0.1" />
     <PackageReference Include="ModernWpfUI" Version="0.9.6" />
@@ -35,14 +38,9 @@
     <PackageReference Include="SharpDX.DirectSound" Version="4.2.0" />
     <PackageReference Include="SharpDX.XAudio2" Version="4.2.0" />
     <PackageReference Include="System.IO.Ports" Version="9.0.4" />
-    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <!--<PackageReference Include="System.Net.Http" Version="4.3.4" />-->
     <PackageReference Include="System.Speech" Version="9.0.4" />
-    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\IRSDKSharper\IRSDKSharper.csproj" />
-    <ProjectReference Include="..\SimagicHPR\SimagicHPR.csproj" />
+    <!--<PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />-->
   </ItemGroup>
 
   <ItemGroup>
