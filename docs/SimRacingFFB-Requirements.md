@@ -21,8 +21,10 @@ It is intentionally written to support **Kent Beck–style Test-Driven Developme
 ### 1.2 Multi-Wheel Support
 
 - The application shall support multiple force feedback steering wheels (e.g., Simucube, Logitech G29, Moza, Simagic).
-- Each wheel implementation shall be isolated behind a common interface.
-- The application shall not depend on vendor-specific APIs outside of the wheel adapter layer.
+- The core force feedback logic shall not depend on which wheel is receiving the output signal.
+- The core logic shall operate identically regardless of the target wheel.
+- Adding support for a new wheel shall not require changes to the core force feedback logic.
+- Modifying support for one wheel shall not affect other wheels.
 
 ---
 

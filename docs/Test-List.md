@@ -86,7 +86,9 @@ Items are unordered and intentionally coarse-grained.
 * The system can perform a single processing step.
 * The system can start processing.
 * The system can stop processing.
+* The system can pause processing.
 * The system does not produce output when stopped.
+* The system does not produce output when paused.
 
 ---
 
@@ -112,10 +114,24 @@ Items are unordered and intentionally coarse-grained.
 * Given the same sequence of inputs, the system produces the same outputs.
 * The system does not depend on hidden global state.
 * The system behaves consistently across multiple runs.
+* The system operates at a predictable update rate.
+* The system operates at a configurable update rate.
 
 ---
 
-### 2.6 Explicit Non-Responsibilities
+### 2.6 Game and Wheel Independence
+
+* The system determines which game to use as the telemetry source.
+* The system determines which wheel to use for force feedback output.
+* The core logic operates identically regardless of which game provides telemetry.
+* The core logic operates identically regardless of which wheel receives output.
+* Telemetry from different games produces the same behavior when normalized.
+* Adding support for a new game does not require changes to core logic.
+* Adding support for a new wheel does not require changes to core logic.
+
+---
+
+### 2.7 Explicit Non-Responsibilities
 
 * The system does not require physical hardware.
 * The system does not require a user interface.
