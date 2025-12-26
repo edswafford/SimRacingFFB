@@ -11,8 +11,10 @@ It is intentionally written to support **Kent Beck–style Test-Driven Developme
 ### 1.1 Multi-Game Support
 
 - The application shall support multiple racing simulator games (e.g., iRacing, Assetto Corsa, Automobilista 2).
-- Each game integration shall be isolated such that adding or modifying one game does not affect others.
-- Each game shall be treated as a telemetry data source exposed through a well-defined interface.
+- The core force feedback logic shall not depend on which game is providing telemetry data.
+- The core logic shall operate identically regardless of the source game.
+- Adding support for a new game shall not require changes to the core force feedback logic.
+- Modifying support for one game shall not affect other games.
 
 ---
 
@@ -34,6 +36,7 @@ It is intentionally written to support **Kent Beck–style Test-Driven Developme
 
 ### 1.4 Telemetry Input
 
+- The application shall determine which racing game to use as the telemetry source.
 - The application shall read telemetry data from the active racing game.
 - Telemetry data shall be represented in a normalized internal format.
 - Telemetry reading shall not depend on force feedback output or wheel state.
@@ -52,6 +55,7 @@ It is intentionally written to support **Kent Beck–style Test-Driven Developme
 
 ### 1.6 Force Feedback Output
 
+- The application shall determine which steering wheel to use for force feedback output.
 - The application shall send the generated force feedback signal to the active steering wheel.
 - The output process shall not modify the force feedback signal.
 - Failures in sending force feedback shall be detectable and reportable.
@@ -65,7 +69,7 @@ It is intentionally written to support **Kent Beck–style Test-Driven Developme
   1. Read telemetry data from the active game  
   2. Generate a force feedback signal  
   3. Send the force feedback signal to the active wheel  
-- The loop shall be externally controllable (start, stop, pause).
+- The loop shall be controllable (start, stop, pause).
 - The loop shall operate at a predictable and configurable update rate.
 
 ---
