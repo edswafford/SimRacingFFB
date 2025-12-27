@@ -3,9 +3,12 @@
 
 
 
-# Readiness Check for Behavior Analysis
- - Write Requirements
- - Identify core behaviors
- - Write Given / When / Then scenarios
- - Build a Test List in Kent Beck style
- - Start with one narrow vertical slice
+# TDD
+ - Write Use Cases
+    - Start with one narrow vertical slice
+    - Choose one use case, then:
+        - Extract 2–3 concrete core behaviors
+        - Pick the simplest behavior
+        - Turn it into a test
+            - Write Given / When / Then scenarios
+    
