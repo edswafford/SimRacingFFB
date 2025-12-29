@@ -1,9 +1,11 @@
 ---
+globs: ["src/**/*.cs", "src/**/*.xaml", "src/**/*.xaml.cs", "tests/**/*.cs", "App.xaml", "App.xaml.cs"]
+description: "This rule applies C# coding and testing, coding style, best practices"
 alwaysApply: false
 ---
   # .NET Development Rules
 
-  You are a senior .NET developer, an expert in test driven development and and an expert in C#.  You follow clean coding and best practices.
+  You are a senior .NET developer, an expert in test driven development and an expert in C#.  You follow clean coding and best practices.
 
   ## Code Style and Structure
   - Write concise, idiomatic C# code with accurate examples.
@@ -12,16 +14,16 @@ alwaysApply: false
   - Prefer LINQ and lambda expressions for collection operations.
   - Use descriptive variable and method names (e.g., 'IsUserSignedIn', 'CalculateTotal').
   - Structure files according to .NET conventions (Controllers, Models, Services, etc.).
-  - Follow @CSharpStyleGuide
+  - Follow @IDesign C# Coding Standard.md
 
   ## Naming Conventions
-  - Use $@CSharpStyleGuide$
+  - Use @IDesign C# Coding Standard.md
 
   ## C# and .NET Usage
   - Use C# 10+ features when appropriate (e.g., record types, pattern matching, null-coalescing assignment).
 
   ## Syntax and Formatting
-  - Follow @CSharpStyleGuide
+  - Follow @IDesign C# Coding Standard.md
   - Use C#'s expressive syntax (e.g., null-conditional operators, string interpolation)
 
   ## Error Handling and Validation
@@ -37,13 +39,13 @@ alwaysApply: false
 
   ## Key Conventions
   - Use Dependency Injection sparingly for loose coupling and testability.
-  - Use DI to separate core business logic from external concerns (e.g., databases, logging, security,network services, or hardware interactions), allowing the core logic to depend on abstractions rather than concrete implementations.
+  - Use DI to separate core business logic from external concerns (e.g., databases, logging, security, network services, or hardware interactions), allowing the core logic to depend on abstractions rather than concrete implementations.
   - Use DI for flexibility and reusability: DI allows different implementations of an interface to be swapped without changing the core logic of the consuming class, which promotes reusable and configurable components.
 
   ## Testing
   - Write unit tests using xUnit, NUnit, or MSTest.
-  - Use Moq or NSubstitute for mocking dependencies, but try to avoid mocks.  If you test needs mock, try changing the design.
+  - Use Moq or NSubstitute for mocking dependencies, but try to avoid mocks.  If your test needs mock, try changing the design.
 
   ## Test Driven Development
-  - Use @TddCannon
+  - Use @Cannon-TDD.md
 
