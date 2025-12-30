@@ -11,13 +11,3 @@
 1. The application shall send the force feedback signal to the racing wheel.
 1. The application shall cycle through three steps in the following order: read telemetry data from the game, create the force feedback signal, send the force feedback signal to the racing wheel
 
-
-
-# TDD
-- Write Use Cases
-    - Start with one narrow vertical slice
-    - Choose one use case, then:
-        - Extract 2–3 concrete core behaviors
-        - Pick the simplest behavior
-        - Turn it into a test
-            - Write Given / When / Then scenarios
