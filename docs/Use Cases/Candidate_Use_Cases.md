@@ -15,22 +15,22 @@ The following iRacing-specific concepts have been generalized:
 
 ### Core FFB Processing
 
-1. **Driver feels resistance when turning into a corner**
-   - Read force feedback data from game
-   - Process through selected algorithm
-   - Apply output adjustments
-   - Send to steering wheel
-   - *Status: Already exists in Use Cases folder*
-   - *Source: Marvin's UC1 - Driver feels resistance when turning into a corner*
+1. ~~**Driver feels resistance when turning into a corner**~~
+   - ~~Read force feedback data from game~~
+   - ~~Process through selected algorithm~~
+   - ~~Apply output adjustments~~
+   - ~~Send to steering wheel~~
+   - ~~*Status: Already exists in Use Cases folder*~~
+   - ~~*Source: Marvin's UC1 - Driver feels resistance when turning into a corner*~~
 
-2. **System processes FFB at target rate (e.g., 360Hz)**
-   - Read telemetry at game's native rate (varies by game)
-   - Interpolate/upsample to target processing rate
-   - Process algorithm at target rate
-   - Apply all adjustments at target rate
-   - Output to wheel at target rate
-   - *Note: Generalizes iRacing's 60Hz→360Hz processing*
-   - *Source: Marvin's UC13 - System processes FFB at 360Hz*
+2. ~~**System processes FFB at target rate (e.g., 360Hz)**~~
+   - ~~Read telemetry at game's native rate (varies by game)~~
+   - ~~Interpolate/upsample to target processing rate~~
+   - ~~Process algorithm at target rate~~
+   - ~~Apply all adjustments at target rate~~
+   - ~~Output to wheel at target rate~~
+   - ~~*Note: Generalizes iRacing's 60Hz→360Hz processing*~~
+   - ~~*Source: Marvin's UC13 - System processes FFB at 360Hz*~~
 
 3. **System fades FFB in/out smoothly**
    - Fade in over configurable duration when FFB is enabled
@@ -128,12 +128,12 @@ The following iRacing-specific concepts have been generalized:
 
 ### State Management
 
-17. **System suspends FFB when appropriate**
-    - Suspend when simulator's built-in FFB is enabled (if configured)
-    - Suspend when vehicle is not on track
-    - Suspend during replay/spectator mode
-    - Prevent FFB when it shouldn't be active
-    - *Source: Marvin's Behaviors B7.1-B7.3 (state management) - part of core FFB processing*
+17. ~~**System suspends FFB when appropriate**~~
+    - ~~Suspend when simulator's built-in FFB is enabled (if configured)~~
+    - ~~Suspend when vehicle is not on track~~
+    - ~~Suspend during replay/spectator mode~~
+    - ~~Prevent FFB when it shouldn't be active~~
+    - ~~*Source: Marvin's Behaviors B7.1-B7.3 (state management) - part of core FFB processing*~~
 
 18. **System resets FFB device**
     - Reinitialize force feedback device on demand
@@ -175,9 +175,9 @@ The following iRacing-specific concepts have been generalized:
 ## Use Case Categories
 
 ### Must-Have (Core Functionality)
-- Use Case 1: Driver feels resistance when turning into a corner
-- Use Case 2: System processes FFB at target rate
-- Use Case 17: System suspends FFB when appropriate
+- Use Case 1: Driver feels resistance when turning into a corner~~
+- Use Case 2: System processes FFB at target rate~~
+- Use Case 17: System suspends FFB when appropriate~~
 
 ### Should-Have (Important Features)
 - Use Case 3: System fades FFB in/out smoothly
@@ -192,6 +192,18 @@ The following iRacing-specific concepts have been generalized:
 - Use Case 12-16: Force effects (soft lock, friction, centering, parked reduction, LFE)
 - Use Case 18: System resets FFB device
 - Use Case 21-22: Additional output adjustments
+
+---
+
+## First Iteration (moved)
+
+The selected use cases for the first iteration have been moved to a separate working document: `docs/Use Cases/First_Iteration_Bare_Bones.md`. The three minimal use cases are summarized here for quick reference:
+
+- **Use Case 1: Driver feels resistance when turning into a corner** — source: Marvin's UC1
+- **Use Case 2: System processes FFB at target rate (e.g., 360Hz)** — source: Marvin's UC13
+- **Use Case 17: System suspends FFB when appropriate** — source: Marvin's B7.1-B7.3
+
+See `docs/Use Cases/First_Iteration_Bare_Bones.md` for full details and implementation notes.
 
 ---
 
